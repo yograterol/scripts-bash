@@ -14,3 +14,5 @@ iptables -I INPUT -m state --state NEW -p tcp \
  
 iptables -I INPUT -m state --state NEW -p udp \
     -m multiport --dport 111,892,2049,32769 -s $1 -j ACCEPT
+
+service iptables save
